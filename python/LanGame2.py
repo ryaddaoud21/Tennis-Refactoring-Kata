@@ -10,9 +10,11 @@ class TennisGame2:
     def won_point(self, playerName):
         if playerName == "player1":
             self.P1Score()
-        else:
+        elif playerName == "player2":
             self.P2Score()
-
+        else:
+            raise ValueError("Player name is not recognized")
+        
     def score(self):
         result = ""
         if (self.score_player1  == self.score_player2 and self.score_player1  < 3):
